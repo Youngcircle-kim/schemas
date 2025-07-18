@@ -1,0 +1,41 @@
+{
+	"@context": {
+		"@version": 1.1,
+		"@protected": true,
+		"id": "@id",
+		"type": "@type",
+		"VerifiableCredential": "https://www.w3.org/2018/credentials#VerifiableCredential",
+		"Ticket": "https://youngcircle-kim.github.io/terms#Ticket",
+		"ticketNumber": "https://youngcircle-kim.github.io/terms#ticketNumber",
+		"ticketToken": {
+			"@id": "https://youngcircle-kim.github.io/terms#ticketToken",
+			"@type": "@id"
+		},
+		"dateIssued": {
+			"@id": "https://youngcircle-kim.github.io/terms#dateIssued",
+			"@type": "http://www.w3.org/2001/XMLSchema#date"
+		},
+		"issuedBy": {
+			"@id": "https://youngcircle-kim.github.io/terms#issuedBy",
+			"@type": "@id"
+		},
+		"name": "https://schema.org/name",
+		"priceCurrency": "https://schema.org/priceCurrency",
+		"totalPrice": {
+			"@id": "https://schema.org/price",
+			"@type": "http://www.w3.org/2001/XMLSchema#decimal"
+		},
+		"ticketedSeat": {
+			"@id": "https://youngcircle-kim.github.io/terms#ticketedSeat",
+			"@container": "@set"
+		},
+		"seatRow": "https://youngcircle-kim.github.io/terms#seatRow",
+		"seatNumber": "https://youngcircle-kim.github.io/terms#seatNumber",
+		"seatSection": "https://youngcircle-kim.github.io/terms#seatSection",
+		"seatingType": "https://youngcircle-kim.github.io/terms#seatingType",
+		"underName": {
+			"@id": "https://schema.org/underName",
+			"@container": "@set"
+		}
+	}
+}
