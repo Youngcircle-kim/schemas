@@ -1,0 +1,81 @@
+{
+	"@context": {
+		"@vocab": "https://youngcircle-kim.github.io/terms#",
+		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+		"xsd": "http://www.w3.org/2001/XMLSchema#"
+	},
+	"@graph": [
+		{
+			"@id": "ticketNumber",
+			"rdfs:label": "Ticket Number",
+			"rdfs:comment": "Unique identifier for the ticket.",
+			"rdfs:range": "xsd:string"
+		},
+		{
+			"@id": "ticketToken",
+			"rdfs:label": "Ticket Token",
+			"rdfs:comment": "Token associated with the ticket, often used as a QR code or URI link.",
+			"rdfs:range": "@id"
+		},
+		{
+			"@id": "dateIssued",
+			"rdfs:label": "Date Issued",
+			"rdfs:comment": "The date the ticket was issued.",
+			"rdfs:range": "xsd:date"
+		},
+		{
+			"@id": "issuedBy",
+			"rdfs:label": "Issued By",
+			"rdfs:comment": "Entity (e.g., organization or venue) that issued the ticket.",
+			"rdfs:range": "@id"
+		},
+		{
+			"@id": "priceCurrency",
+			"rdfs:label": "Price Currency",
+			"rdfs:comment": "Currency code used for the ticket price (e.g., KRW, USD).",
+			"rdfs:range": "xsd:string"
+		},
+		{
+			"@id": "totalPrice",
+			"rdfs:label": "Total Price",
+			"rdfs:comment": "Total price of the ticket.",
+			"rdfs:range": "xsd:decimal"
+		},
+		{
+			"@id": "ticketedSeat",
+			"rdfs:label": "Ticketed Seat",
+			"rdfs:comment": "Seat details associated with the ticket.",
+			"rdfs:range": "rdf:List"
+		},
+		{
+			"@id": "seatRow",
+			"rdfs:label": "Seat Row",
+			"rdfs:comment": "Row number of the ticketed seat.",
+			"rdfs:range": "xsd:string"
+		},
+		{
+			"@id": "seatNumber",
+			"rdfs:label": "Seat Number",
+			"rdfs:comment": "Seat number of the ticketed seat.",
+			"rdfs:range": "xsd:string"
+		},
+		{
+			"@id": "seatSection",
+			"rdfs:label": "Seat Section",
+			"rdfs:comment": "Section or zone name of the seat.",
+			"rdfs:range": "xsd:string"
+		},
+		{
+			"@id": "seatingType",
+			"rdfs:label": "Seating Type",
+			"rdfs:comment": "Type of seating (e.g., ReservedSeat, StandingRoomOnly).",
+			"rdfs:range": "xsd:string"
+		},
+		{
+			"@id": "underName",
+			"rdfs:label": "Under Name",
+			"rdfs:comment": "List of DIDs representing individuals permitted to use the ticket.",
+			"rdfs:range": "rdf:List"
+		}
+	]
+}
