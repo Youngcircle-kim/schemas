@@ -1,5 +1,5 @@
 {
-	"$id": "https://youngcircle-kim.github.io/schemas/v1/ticket-schema.json",
+	"$id": "https://youngcircle-kim.github.io/schemas/v1/PrimaryPurchaserTicketSchema.json",
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "VerifiableTicketCredential",
 	"description": "Credential data schema of ticket claim",
@@ -15,33 +15,25 @@
 				"ticketNumber": {
 					"type": "string"
 				},
-				"ticketToken": {
-					"type": "string",
-					"format": "uri"
-				},
-				"dateIssued": {
-					"type": "string",
-					"format": "date"
-				},
-				"issuedBy": {
-					"type": "object",
-					"properties": {
-						"name": {
-							"type": "string"
-						},
-						"id": {
-							"type": "string",
-							"format": "uri"
-						}
-					}
-				},
 				"priceCurrency": {
-					"type": "string"
+					"type": "string",
+					"pattern": "^[A-Z]{3,10}$"
 				},
 				"totalPrice": {
 					"type": "number"
 				},
-				"ticketedSeat": {
+				"event": {
+					"type": "object",
+					"properties": {
+						"name": { "type": "string" },
+						"location": { "type": "string" },
+						"startDate": { "type": "string", "format": "date-time" },
+						"endDate": { "type": "string", "format": "date-time" },
+						"thumbnail": { "type": "string", "format": "uri" }
+					},
+					"required": ["name", "location", "startDate"]
+				},
+				"seatInfo": {
 					"type": "array",
 					"items": {
 						"type": "object",
@@ -73,12 +65,13 @@
 							"id": {
 								"type": "string",
 								"format": "uri"
-							}
+							},
+							"required": ["id"]
 						}
 					}
 				}
 			},
-			"required": ["ticketNumber", "ticketToken", "issuedBy", "underName"]
+			"required": ["id", "ticketNumber", "underName"]
 		}
 	}
 }
