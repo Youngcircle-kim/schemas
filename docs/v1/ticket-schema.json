@@ -1,84 +1,84 @@
 {
-  "$id": "https://youngcircle-kim.github.io/schemas/v1/ticket-schema.json",
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "VerifiableTicketCredential",
-  "description": "Credential data schema of ticket claim",
-  "type": "object",
-  "properties": {
-    "credentialSubject": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "string",
-          "format": "uri"
-        },
-        "ticketNumber": {
-          "type": "string"
-        },
-        "ticketToken": {
-          "type": "string",
-          "format": "uri"
-        },
-        "dateIssued": {
-          "type": "string",
-          "format": "date"
-        },
-        "issuedBy": {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "id": {
-              "type": "string",
-              "format": "uri"
-            }
-          }
-        },
-        "priceCurrency": {
-          "type": "string"
-        },
-        "totalPrice": {
-          "type": "number"
-        },
-        "ticketedSeat": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "seatRow": {
-                "type": "string"
-              },
-              "seatNumber": {
-                "type": "string"
-              },
-              "seatSection": {
-                "type": "string"
-              },
-              "seatingType": {
-                "type": "string"
-              }
-            },
-            "required": ["seatingType"]
-          }
-        },
-        "underName": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "id": {
-                "type": "string",
-                "format": "uri"
-              }
-            }
-          }
-        }
-      },
-      "required": ["ticketNumber", "ticketToken", "issuedBy", "underName"]
-    }
-  }
+	"$id": "https://youngcircle-kim.github.io/schemas/v1/ticket-schema.json",
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "VerifiableTicketCredential",
+	"description": "Credential data schema of ticket claim",
+	"type": "object",
+	"properties": {
+		"credentialSubject": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "string",
+					"format": "uri"
+				},
+				"ticketNumber": {
+					"type": "string"
+				},
+				"ticketToken": {
+					"type": "string",
+					"format": "uri"
+				},
+				"dateIssued": {
+					"type": "string",
+					"format": "date"
+				},
+				"issuedBy": {
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"id": {
+							"type": "string",
+							"format": "uri"
+						}
+					}
+				},
+				"priceCurrency": {
+					"type": "string"
+				},
+				"totalPrice": {
+					"type": "number"
+				},
+				"ticketedSeat": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"seatRow": {
+								"type": "string"
+							},
+							"seatNumber": {
+								"type": "string"
+							},
+							"seatSection": {
+								"type": "string"
+							},
+							"seatingType": {
+								"type": "string"
+							}
+						},
+						"required": ["seatingType"]
+					}
+				},
+				"underName": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string"
+							},
+							"id": {
+								"type": "string",
+								"format": "uri"
+							}
+						}
+					}
+				}
+			},
+			"required": ["ticketNumber", "ticketToken", "issuedBy", "underName"]
+		}
+	}
 }
