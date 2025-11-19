@@ -2,7 +2,7 @@
 	"$id": "https://youngcircle-kim.github.io/schemas/v1/PrimaryPurchaserTicketSchema.json",
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "VerifiableTicketCredential",
-	"description": "Credential data schema of ticket claim",
+	"description": "Credential subject schema of ticket claim for primary purchaser",
 	"type": "object",
 	"properties": {
 		"credentialSubject": {
@@ -51,7 +51,7 @@
 								"type": "string"
 							}
 						},
-						"required": ["seatingType"]
+						"required": ["seatSection"]
 					}
 				},
 				"underName": {
@@ -59,9 +59,6 @@
 					"items": {
 						"type": "object",
 						"properties": {
-							"name": {
-								"type": "string"
-							},
 							"id": {
 								"type": "string",
 								"format": "uri"
@@ -73,5 +70,6 @@
 			},
 			"required": ["id", "ticketNumber", "underName"]
 		}
-	}
+	},
+	"required": ["credentialSubject"]
 }
