@@ -1,5 +1,5 @@
 {
-	"$id": "https://youngcircle-kim.github.io/schemas/v1CompanionPurchaserTicketSchema.json",
+	"$id": "https://youngcircle-kim.github.io/schemas/v1/CompanionPurchaserTicketSchema.json",
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "VerifiableTicketCredential",
 	"description": "Credential subject schema of ticket claim for companion purchaser",
@@ -56,7 +56,8 @@
 								"type": "string",
 								"format": "uri"
 							}
-						}
+						},
+						"required": ["id"]
 					}
 				}
 			},
